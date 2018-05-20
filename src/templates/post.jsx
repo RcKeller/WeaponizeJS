@@ -2,7 +2,6 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 
-import SEO from '../components/SEO'
 import config from '../../data/SiteConfig'
 import './b16-tomorrow-dark.css'
 import SiteHeader from '../components/Layout/Header'
@@ -23,7 +22,6 @@ export default class PostTemplate extends React.Component {
         <Helmet>
           <title>{`${post.title} | ${config.siteTitle}`}</title>
         </Helmet>
-        <SEO postPath={slug} postNode={postNode} postSEO />
         <BodyGrid>
           <HeaderContainer>
             <SiteHeader location={this.props.location} />

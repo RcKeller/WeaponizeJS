@@ -6,9 +6,12 @@ import './css/index.css'
 import './css/prism-okaidia.css'
 import theme from './theme'
 
+import '../styles/index.scss'
+import '../styles/global.scss'
+
 export default class MainLayout extends React.Component {
-  getLocalTitle() {
-    function capitalize(string) {
+  getLocalTitle () {
+    function capitalize (string) {
       return string.charAt(0).toUpperCase() + string.slice(1)
     }
     const pathPrefix = config.pathPrefix ? config.pathPrefix : '/'
@@ -42,13 +45,13 @@ export default class MainLayout extends React.Component {
     return title
   }
 
-  render() {
+  render () {
     const { children } = this.props
     return (
       <div>
         <Helmet>
           <title>{`${config.siteTitle} |  ${this.getLocalTitle()}`}</title>
-          <meta name="description" content={config.siteDescription} />
+          <meta name='description' content={config.siteDescription} />
         </Helmet>
         <ThemeProvider theme={theme}>{children()}</ThemeProvider>
       </div>

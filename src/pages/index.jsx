@@ -2,7 +2,6 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 
-import SEO from '../components/SEO'
 import config from '../../data/SiteConfig'
 import CtaButton from '../components/CtaButton'
 import Navigation from '../components/Layout/Navigation'
@@ -14,7 +13,6 @@ class Index extends React.Component {
     return (
       <div className="index-container">
         <Helmet title={config.siteTitle} />
-        <SEO postEdges={allSEOMarkdown} />
         <main>
           <IndexHeadContainer>
             <Navigation />
